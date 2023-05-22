@@ -48,7 +48,7 @@ public class ProductService {
 
     public String getTotalExpenseByMonth(String name , Month month) {
         List<Product> allexpense = expenseRepo.findAll() ;
-        Double TotalExpense = 0.0 ;
+        Double TotalExpense = 0.0;
 
         for(Product exp:allexpense){
             if(exp.getUser().getUser_name().equals(name) && exp.getDate().getMonth().equals(month)){
